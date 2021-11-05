@@ -19,4 +19,7 @@ class Quiz(models.Model):
         return f"{self.name}-{self.topic}"
 
     def get_questions(self):
-      return self.questions.all()
+      return self.questions.all()[:self.number_of_questions]
+
+    class Meta:
+      verbose_name_plural = 'Quizes'
