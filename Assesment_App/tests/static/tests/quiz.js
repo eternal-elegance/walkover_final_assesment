@@ -115,7 +115,8 @@ const sendData = () => {
       bton.classList.add('not-visible')
       timerBox.classList.add('not-visible')
 
-      scoreBox.innerHTML = `${response.passed ? 'Congratulations! ' : 'Ups..:( '}Your result is ${response.score.toFixed(2)}%`
+      scoreBox.innerHTML = `${response.passed ? 'Congratulations! ' : ''}Your result is ${response.score.toFixed(2)}%`
+      scoreBox.classList.add(...['h3', 'lead', 'font-weight-bold'])
 
       results.forEach(res => {
         const resDiv = document.createElement("div")
@@ -127,14 +128,14 @@ const sendData = () => {
 
           if (resp == 'not answered') {
             resDiv.innerHTML += '- not answered'
-            resDiv.classList.add('bg-danger')
+            resDiv.classList.add('bg-dark')
           }
           else {
             const answer = resp['answered']
             const correct = resp['correct_answer']
 
             if (answer == correct) {
-              resDiv.classList.add('bg-success')
+              resDiv.classList.add('bg-primary')
               resDiv.innerHTML += ` answered: ${answer}`
             } else {
               resDiv.classList.add('bg-danger')
