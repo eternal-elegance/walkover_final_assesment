@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-h2vr$ti=osa0kf=wqbnfp75zss6s43khg&++4dmz=n=@j-9w_&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://walkoverassessmentsite-env.eba-iu7rqznq.ap-south-1.elasticbeanstalk.com/']
+ALLOWED_HOSTS = ['walkoverassessmentsite-env.eba-iu7rqznq.ap-south-1.elasticbeanstalk.com']
 
 
 # Application definition
