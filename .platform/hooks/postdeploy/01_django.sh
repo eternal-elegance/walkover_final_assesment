@@ -3,12 +3,13 @@
 source /var/app/venv/*/bin/activate && {
 
 # collecting static files
-python manage.py collectstatic --noinput;
+# python manage.py collectstatic --noinput;
 # log which migrations have already been applied
 python manage.py showmigrations;
 # migrate user model
 python manage.py migrate users --noinput;
 # migrate the rest
 python manage.py migrate --noinput;
+python manage.py createsuperuser walkover abcd@mail.com abcd1234
 
 }
