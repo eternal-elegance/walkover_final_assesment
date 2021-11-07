@@ -101,11 +101,11 @@ import os
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': os.environ['db'],
-    'USER': os.environ['postgres'],
-    'PASSWORD': os.environ['awsadmin'],
-    'HOST': os.environ['aamlj6v4jy2pij.ch9gduobbv1g.ap-south-1.rds.amazonaws.com'],
-    'PORT': os.environ['5432'],
+    'NAME': os.environ['RDS_DB_NAME'],
+    'USER': os.environ['RDS_USERNAME'],
+    'PASSWORD': os.environ['RDS_PASSWORD'],
+    'HOST': os.environ['RDS_HOSTNAME'],
+    'PORT': os.environ['RDS_PORT'],
     }
 }
 
