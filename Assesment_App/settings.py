@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-h2vr$ti=osa0kf=wqbnfp75zss6s43khg&++4dmz=n=@j-9w_&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://walkoverassessmentsite-env.eba-iu7rqznq.ap-south-1.elasticbeanstalk.com/']
 
 
 # Application definition
@@ -85,14 +85,27 @@ WSGI_APPLICATION = 'Assesment_App.wsgi.application'
 
 
 # connecting postgres database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'test',
+#         'USER': 'postgres',
+#         'PASSWORD': 'admin',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
+import os
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'test',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '5432',
+'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': os.environ['db'],
+    'USER': os.environ['postgres'],
+    'PASSWORD': os.environ['awsadmin'],
+    'HOST': os.environ['aamlj6v4jy2pij.ch9gduobbv1g.ap-south-1.rds.amazonaws.com'],
+    'PORT': os.environ['5432'],
     }
 }
 
