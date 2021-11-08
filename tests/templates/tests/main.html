@@ -32,14 +32,15 @@ home
 
 <div class="jumbotron text-center h2">Walkover Assessment Platform</div>
 <hr>
-<div class="d-flex flex-row justify-content-around align-items-center px-8 py-15">
+<div class="d-flex flex-row justify-content-around align-items-stretch px-8 py-15 flex-wrap">
   {% for obj in object_list %}
-  <div class="d-flex flex-column justify-content-center align-items-center"
-  style="color: rgb(255, 255, 255);
-  background-color: #343a40;
+  <div class="d-flex flex-column justify-content-center align-items-center bg-primary text-light"
+  style="
+  /* color: rgb(255, 255, 255);
+  background-color: #1f8ad1; */
   padding: 6px 10px;
   border-radius: 10px;
-  ;
+  margin: 7px 1px;
   ">
     <!-- button -->
     <a class="btn font-weight-bold modal-button d-inline text-light h4" data-pk="{{obj.pk}}" data-quiz="{{obj.name}}" data-questions="{{obj.number_of_questions}}"
